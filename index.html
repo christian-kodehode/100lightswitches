@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>100 light switches</title>
+  </head>
+
+  <body>
+    <div class="section" id="top">
+      <div class="header">
+        <h1 class="h1">100 light switches</h1>
+        <p class="p p-head">
+          There are 100 light switches with two states, <span class="on">on</span> and
+          <span class="off">off</span>. They all begin being turned
+          <span class="off">off</span>. One by one, 100 people flip some amount of switches and
+          changes its state to the opposite of what it was after the previous person flipped
+          their chosen switches. The 1st person flips every switch. The 2nd person flips every
+          2nd switch. The 3rd person flips every 3rd switch, and so on until the 100th person
+          flips every 100th switch.
+        </p>
+        <p class="p p-bold">
+          Which of the light switches are turned on after every person has flipped their chosen
+          switches?
+        </p>
+      </div>
+      <div class="buttons">
+        <button class="clickbtn" id="btn1" onclick="flipOnce()">
+          1 person flips switches
+        </button>
+        <button class="clickbtn" id="btn10" onclick="flipTen()">
+          10 people flips switches
+        </button>
+        <button class="clickbtn" id="btn50" onclick="flitFifty()">
+          50 people flips switches
+        </button>
+        <button class="clickbtn" id="btn100" onclick="flipHundred()">
+          100 people flips switches
+        </button>
+        <button class="clickbtn" id="btn100" onclick="refresh()">Refresh</button>
+      </div>
+      <div class="counterContainer">
+        <h2 class="h2-count">Flippings:</h2>
+        <div class="counter" id="counter">0</div>
+      </div>
+    </div>
+
+    <div class="section" id="middle">
+      <div class="light-switch-container" id="light-switch-container"></div>
+    </div>
+    <div class="section" id="bottom">Created by Christian Riis</div>
+  </body>
+</html>
