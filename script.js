@@ -2,7 +2,7 @@ let lightSwitchContainer = document.getElementById("light-switch-container");
 
 let divCounter = 1;
 
-while (divCounter < 401) {
+while (divCounter < 1001) {
   let lightSwitch = document.createElement("div");
   lightSwitch.id = "switch-" + divCounter;
   lightSwitch.className = "light-switch";
@@ -18,7 +18,7 @@ let personCounter = 1;
 
 function flipOnce() {
   counterDOM.innerText = `${personCounter}`;
-  for (let i = personCounter; i < 401; i += personCounter) {
+  for (let i = personCounter; i < 1001; i += personCounter) {
     let lightSwitch = document.getElementById("switch-" + i);
     if (lightSwitch.style.backgroundColor === "red") {
       lightSwitch.style.backgroundColor = "green";
@@ -43,6 +43,12 @@ function flipFifty() {
 
 function flipHundred() {
   for (let i = 0; i < 100; i++) {
+    flipOnce();
+  }
+}
+
+function flipThousand() {
+  for (let i = 0; i < 1000; i++) {
     flipOnce();
   }
 }
