@@ -151,11 +151,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 2334px;
->>>>>>> 4bd4ed5eb5c2aac20b5a8e4d2066724b3be75378
 }
 
 .light-switch {
