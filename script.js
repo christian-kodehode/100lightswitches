@@ -35,12 +35,6 @@ function flipTen() {
   }
 }
 
-function flipFifty() {
-  for (let i = 0; i < 50; i++) {
-    flipOnce();
-  }
-}
-
 function flipHundred() {
   for (let i = 0; i < 100; i++) {
     flipOnce();
