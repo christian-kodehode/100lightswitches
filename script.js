@@ -48,5 +48,12 @@ function flipThousand() {
 }
 
 function refresh() {
-  window.location.reload();
+  personCounter = 1;
+  let counterDOM = document.getElementById("counter");
+  counterDOM.innerText = "0";
+
+  for (let i = 1; i < 1001; i++) {
+    let lightSwitch = document.getElementById("switch-" + i);
+    lightSwitch.style.backgroundColor = "red";
+  }
 }
