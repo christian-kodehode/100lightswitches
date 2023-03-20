@@ -132,8 +132,8 @@ body {
 }
 
 .h2-count {
-  margin-right: 3vmin;
   font-size: 3.5vmin;
+  margin-right: 2.5vmin;
 }
 
 .counter {
@@ -144,8 +144,22 @@ body {
   font-size: 4vmin;
   min-width: 7vmax;
   height: 8vmin;
+  margin-right: 2.5vmin;
   border: 2px solid black;
 }
+
+.toggle {
+  width: 20vmax;
+  font-size: 2.5vmin;
+  padding: 1vmin;
+  margin: 2.5vmin 2.5vmin 0 0;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
 /*---------------------------
 **----- LIGHT SWITCHES ------
 ---------------------------*/
@@ -159,6 +173,22 @@ body {
 }
 
 .light-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3vw;
+  font-weight: 700;
+  height: 7.5vw;
+  width: 7.5vw;
+  margin: 0.75vw;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.light-switch-2 {
   display: flex;
   flex-direction: row;
   justify-content: center;

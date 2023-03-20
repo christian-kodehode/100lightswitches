@@ -31,12 +31,16 @@
         <button class="click-btn" onclick="flipOnce()">1 flipper</button>
         <button class="click-btn" onclick="flipTen()">10 flippers</button>
         <button class="click-btn" onclick="flipHundred()">100 flippers</button>
-        <button class="click-btn" onclick="flipThousand()">1000 flippers</button>
+        <button class="click-btn" onclick="flipThousand()" id="flip1000" disabled>
+          1000 flippers
+        </button>
         <button class="click-btn refresh-btn" onclick="refresh()">Refresh</button>
       </div>
       <div class="counterContainer">
         <h2 class="h2-count">Switch flippers:</h2>
         <div class="counter" id="counter">0</div>
+        <button class="toggle" onclick="toggleCircles()">Toggle 100/1000 circles</button>
+        <button class="toggle" onclick="toggleColumns()">Toggle 10/20 columns</button>
       </div>
     </div>
 
