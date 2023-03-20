@@ -107,7 +107,7 @@ body {
   width: 12vmax;
   font-size: 2.5vmin;
   padding: 1vmin;
-  margin: 1rem 1rem 0 0;
+  margin: 2.5vmin 2.5vmin 0 0;
 }
 
 .clickbtn:hover {
@@ -162,9 +162,9 @@ body {
   color: white;
   font-size: 4vmin;
   font-weight: 700;
-  height: 6.5vw;
-  width: 6.5vw;
-  margin: 1.25vw;
+  height: 4vw;
+  width: 4vw;
+  margin: 0.25vw;
   border: 2px solid black;
   border-radius: 50%;
   background-color: red;
