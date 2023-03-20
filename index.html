@@ -23,27 +23,20 @@
           flips every 100th switch.
         </p>
         <p class="p p-bold">
-          Which of the light switches are turned on after every person has flipped their chosen
+          Which of the light switches are turned on after every person has flipped their
           switches?
         </p>
       </div>
       <div class="buttons">
-        <button class="clickbtn" id="btn1" onclick="flipOnce()">
-          1 person flips switches
-        </button>
-        <button class="clickbtn" id="btn10" onclick="flipTen()">
-          10 people flips switches
-        </button>
-        <button class="clickbtn" id="btn50" onclick="flitFifty()">
-          50 people flips switches
-        </button>
-        <button class="clickbtn" id="btn100" onclick="flipHundred()">
-          100 people flips switches
-        </button>
-        <button class="clickbtn" id="btn100" onclick="refresh()">Refresh</button>
+        <button class="clickbtn" onclick="flipOnce()">1 flipper</button>
+        <button class="clickbtn" onclick="flipTen()">10 flippers</button>
+        <button class="clickbtn" onclick="flipHundred()">100 flippers</button>
+        <button class="clickbtn" onclick="flipHundred()">100 flippers</button>
+        <button class="clickbtn" onclick="flipThousand()">1000 flippers</button>
+        <button class="clickbtn" onclick="refresh()">Refresh</button>
       </div>
       <div class="counterContainer">
-        <h2 class="h2-count">Flippings:</h2>
+        <h2 class="h2-count">Switch flippers:</h2>
         <div class="counter" id="counter">0</div>
       </div>
     </div>
