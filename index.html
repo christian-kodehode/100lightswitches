@@ -28,19 +28,20 @@
         </p>
       </div>
       <div class="buttons">
-        <button class="click-btn" onclick="flipOnce()">1 flipper</button>
-        <button class="click-btn" onclick="flipTen()">10 flippers</button>
-        <button class="click-btn" onclick="flipHundred()">100 flippers</button>
-        <button class="click-btn" onclick="flipThousand()" id="flip1000" disabled>
+        <button class="click-btn" id="flip-1" onclick="flipOnce()">1 flipper</button>
+        <button class="click-btn" id="flip-10" onclick="flipTen()">10 flippers</button>
+        <button class="click-btn" id="flip-100" onclick="flipHundred()">100 flippers</button>
+        <button class="click-btn" id="flip-half" onclick="flipHalf()">50% flippers</button>
+        <!-- <button class="click-btn" id="flip-1000" onclick="flipFourHundred()" id="flip1000" disabled>
           1000 flippers
-        </button>
-        <button class="click-btn refresh-btn" onclick="refresh()">Refresh</button>
+        </button> -->
+        <button class="click-btn refresh-btn" onclick="refresh()">REFRESH</button>
       </div>
       <div class="counterContainer">
         <h2 class="h2-count">Switch flippers:</h2>
         <div class="counter" id="counter">0</div>
-        <button class="toggle" onclick="toggleCircles()">Toggle 100/1000 circles</button>
-        <button class="toggle" onclick="toggleColumns()">Toggle 10/20 columns</button>
+        <button class="toggle" onclick="toggleCircles()">Toggle 100/400 switches</button>
+        <!-- <button class="toggle" onclick="toggleColumns()">Toggle 10/20 columns</button> -->
       </div>
     </div>
 

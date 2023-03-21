@@ -5,7 +5,7 @@
 body {
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   min-height: 100vh;
   font-family: "Cambria", sans-serif;
@@ -17,13 +17,14 @@ body {
 
 #top {
   margin: 0 auto;
-  width: 85vw;
-  border-bottom: 2px solid black;
+  padding: 3vmin;
+  width: 50vw;
 }
 
 #middle {
   margin: 0 auto;
-  width: 90vw;
+  padding: 0 2vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,15 +32,17 @@ body {
 }
 
 #bottom {
-  margin: 1rem auto 0 auto;
-  padding: 0.75rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  align-items: center;
   border-top: 2px solid black;
   background-color: orange;
   font-size: 2.5vmin;
+  position: fixed;
+  width: 100%;
+  height: 5vmin;
+  margin-top: calc(100vh - 5vmin);
 }
 
 /*-------------------
@@ -165,7 +168,7 @@ body {
 ---------------------------*/
 
 .light-switch-container {
-  margin: 4vmin 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -178,11 +181,11 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 3vw;
+  font-size: 1.5vw;
   font-weight: 700;
-  height: 7.5vw;
-  width: 7.5vw;
-  margin: 0.75vw;
+  height: 3.5vw;
+  width: 3.5vw;
+  margin: 0.35vw;
   border: 2px solid black;
   border-radius: 50%;
   background-color: red;
@@ -194,12 +197,22 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.75vw;
+  font-size: 0.75vw;
   font-weight: 700;
-  height: 4vw;
-  width: 4vw;
-  margin: 0.25vw;
+  height: 1.9vw;
+  width: 1.9vw;
+  margin: 0.1vw 0.15vw;
   border: 2px solid black;
   border-radius: 50%;
   background-color: red;
+}
+
+/*--------------------------
+**----- MEDIA QUERIES ------
+--------------------------*/
+
+@media screen and (max-aspect-ratio: 1/1) {
+  body {
+    flex-direction: column;
+  }
 }

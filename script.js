@@ -1,5 +1,10 @@
 let lightSwitchContainer = document.getElementById("light-switch-container");
 
+let flipOneBtn = document.getElementById("flip-1");
+let flipTenBtn = document.getElementById("flip-10");
+let flipHundredBtn = document.getElementById("flip-100");
+let flipHalfBtn = document.getElementById("flip-half");
+
 let divCounter = 1;
 let toggleCirclesCounter = 1;
 let toggleColumnsCounter = 1;
@@ -29,7 +34,7 @@ function toggleCircles() {
   counterDOM.innerText = `${personCounter}`;
   if (toggleCirclesCounter % 2 === 1) {
     removeCircles();
-    oneThousandDivs();
+    fourHundredDivs();
     toggleCirclesCounter++;
     divCounter = 1;
     let flip1000 = document.getElementById("flip1000");
@@ -46,27 +51,27 @@ function toggleCircles() {
   }
 }
 
-function toggleColumns() {
-  if (toggleColumnsCounter % 2 === 1) {
-    for (let i = 1; i < lightSwitchContainer.childElementCount + 1; i++) {
-      let lightSwitch = document.getElementById("switch-" + i);
-      lightSwitch.className = "light-switch-2";
-    }
-    toggleColumnsCounter++;
-  } else {
-    for (let i = 1; i < lightSwitchContainer.childElementCount + 1; i++) {
-      let lightSwitch = document.getElementById("switch-" + i);
-      lightSwitch.className = "light-switch";
-    }
-    toggleColumnsCounter++;
-  }
-}
+// function toggleColumns() {
+//   if (toggleColumnsCounter % 2 === 1) {
+//     for (let i = 1; i < lightSwitchContainer.childElementCount + 1; i++) {
+//       let lightSwitch = document.getElementById("switch-" + i);
+//       lightSwitch.className = "light-switch-2";
+//     }
+//     toggleColumnsCounter++;
+//   } else {
+//     for (let i = 1; i < lightSwitchContainer.childElementCount + 1; i++) {
+//       let lightSwitch = document.getElementById("switch-" + i);
+//       lightSwitch.className = "light-switch";
+//     }
+//     toggleColumnsCounter++;
+//   }
+// }
 
 function oneHundredDivs() {
-  if (toggleColumnsCounter % 2 === 1) {
-    className = "light-switch";
-  } else {
+  if (toggleCirclesCounter % 2 === 1) {
     className = "light-switch-2";
+  } else {
+    className = "light-switch";
   }
   while (divCounter < 101) {
     let lightSwitch = document.createElement("div");
@@ -79,13 +84,13 @@ function oneHundredDivs() {
   }
 }
 
-function oneThousandDivs() {
-  if (toggleColumnsCounter % 2 === 1) {
-    className = "light-switch";
-  } else {
+function fourHundredDivs() {
+  if (toggleCirclesCounter % 2 === 1) {
     className = "light-switch-2";
+  } else {
+    className = "light-switch";
   }
-  while (divCounter < 1001) {
+  while (divCounter < 401) {
     let lightSwitch = document.createElement("div");
     lightSwitch.id = "switch-" + divCounter;
     lightSwitch.className = className;
@@ -109,6 +114,7 @@ function flipOnce() {
       lightSwitch.style.backgroundColor = "red";
     }
   }
+  disableButtons();
 }
 
 function flipTen() {
@@ -123,9 +129,21 @@ function flipHundred() {
   }
 }
 
-function flipThousand() {
-  for (let i = 0; i < 1000; i++) {
+function flipFourHundred() {
+  for (let i = 0; i < 400; i++) {
     flipOnce();
+  }
+}
+
+function flipHalf() {
+  if (toggleCirclesCounter % 2 === 1) {
+    for (let i = 0; i < 50; i++) {
+      flipOnce();
+    }
+  } else {
+    for (let i = 0; i < 200; i++) {
+      flipOnce();
+    }
   }
 }
 
@@ -138,5 +156,19 @@ function refresh() {
   for (let i = 1; i < divs + 1; i++) {
     let lightSwitch = document.getElementById("switch-" + i);
     lightSwitch.style.backgroundColor = "red";
+  }
+  flipOneBtn.disabled = false;
+  flipTenBtn.disabled = false;
+  flipHundredBtn.disabled = false;
+  flipHalfBtn.disabled = false;
+}
+
+function disableButtons() {
+  let divCount = lightSwitchContainer.childElementCount;
+  if (personCounter >= divCount) {
+    flipOneBtn.disabled = true;
+    flipTenBtn.disabled = true;
+    flipHundredBtn.disabled = true;
+    flipHalfBtn.disabled = true;
   }
 }
